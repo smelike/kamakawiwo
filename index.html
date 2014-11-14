@@ -7,16 +7,17 @@ keywords: Jekyll, Github
 isIndex: true
 
 ---
-<ul>
-	{% for nav in site.nav %}
-		<li style="{{ nav.style }}"><a href="{{ nav.url }}"><span>{{ nav.text }}</span></a></li>
-	{% endfor %}
-</ul>
+
 
 
 <h2>{{ page.title }}</h2>
 <p>The Newest Post</p>
 
+<ul>
+	{% for nav in site.nav %}
+		<li style="{{ nav.style }}"><a href="{{ nav.url }}"><span>{{ nav.text }}</span></a></li>
+	{% endfor %}
+</ul>
 <ul>
 	{% for post in site.posts %}
 		<li>
