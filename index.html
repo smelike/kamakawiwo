@@ -2,8 +2,17 @@
 
 layout: default
 title: My Blog
+description: This blog is built on Jekyll & Github
+keywords: Jekyll, Github
+isIndex: true
 
 ---
+<ul>
+	{% for nav in site.nav %}
+		<li style="{{ nav.style }}"><a href="{{ nav.url }}"><span>{{ nav.text }}</span></a></li>
+	{% endfor %}
+</ul>
+
 
 <h2>{{ page.title }}</h2>
 <p>The Newest Post</p>
